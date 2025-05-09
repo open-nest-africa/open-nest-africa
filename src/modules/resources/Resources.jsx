@@ -4,6 +4,7 @@ import TechnicalWriters from "./TechnicalWriters";
 import Developers from "./Developers";
 import Designers from "./Designers";
 import Layout from "../../components/layout/Layout";
+import SEO from "../../components/SEO";
 import {
   ArrowLeftIcon,
   ArrowRightIcon,
@@ -28,6 +29,10 @@ const Resources = () => {
 
   return (
     <Layout>
+      <SEO 
+        title="Learning Resources - OpenNest-Africa"
+        description="Access curated learning resources, tutorials, and guides for developers, designers, and technical writers. Enhance your skills and contribute to open source."
+      />
       {resources[tab].component}
       <div
         className={`${

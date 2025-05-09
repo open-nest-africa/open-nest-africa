@@ -2,6 +2,7 @@ import React from "react";
 import AuthLayout from "../component/AuthLayout";
 import Button from "../../../components/Button";
 import { Link } from "react-router-dom";
+import SEO from "../../../components/SEO";
 
 const Signup = () => {
   const handleGithubLogin = () => {
@@ -12,6 +13,10 @@ const Signup = () => {
 	};
   return (
     <AuthLayout title="Sign up" className="flex-col items-center">
+      <SEO 
+        title="Join OpenNest-Africa - Sign Up"
+        description="Create your OpenNest-Africa account to start your journey in open source contribution. Connect with African tech talent and grow your skills."
+      />
       <div>
         <div className="space-y-4 flex flex-col justify-center items-center w-[448px] pt-10">
         <Button
@@ -35,8 +40,8 @@ const Signup = () => {
             className="bg-white border-[1.5px] border-[#D0D5DD] border-solid text-[#344054] text-base font-semibold py-4 px-[130px] w-full"
           />
           <p className="text-base text-[#667185]">
-            By creating an account you agree with our Terms of Service, Privacy
-            Policy, and our default Notification Settings.
+            By creating an account you agree with our Terms of Service, Privacy
+            Policy, and our default Notification Settings.
           </p>
         </div>
         <p className="text-sm text-[#667185] mt-10">

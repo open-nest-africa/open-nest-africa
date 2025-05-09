@@ -1,10 +1,15 @@
 import React from "react";
 import Layout from "../../components/layout/Layout";
 import ImageCard from "../../components/ImageCard";
+import SEO from "../../components/SEO";
 
 const AboutUs = () => {
   return (
     <Layout>
+      <SEO 
+        title="About OpenNest-Africa - Who We Are"
+        description="Get to know OpenNest-Africa—an open source community that welcomes everyone and connects people from all over the world."
+      />
       <div className="px-[100px] py-16 w-full h-full mx-auto text-black space-y-[50px]">
         <h1 className="text-[64px] leading-[92.8px] font-semibold">About Us</h1>
         <p className="text-2xl leading-[34.8px]">
@@ -18,7 +23,7 @@ const AboutUs = () => {
         <div>
           <h2 className="font-semibold text-4xl">OpenNest Team</h2>
           <p className="text-2xl leading-[34.8px] pt-3">
-            <span className="font-bold">We’re not just a team;</span> we’re a
+            <span className="font-bold">We're not just a team;</span> we're a
             family of passionate individuals who believe in the power of open
             source. Each of us brings our unique experiences and talents to the
             table, and together, we're on a mission to make open-source projects
@@ -57,7 +62,7 @@ const AboutUs = () => {
             </p>
             <p>
               <h6>
-                If you like what we’re building, you can support us in two ways:
+                If you like what we're building, you can support us in two ways:
               </h6>
               <ul className="list-disc pl-5">
                 <li>

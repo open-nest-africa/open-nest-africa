@@ -4,6 +4,7 @@ import Button from "../../../components/Button";
 import TextField from "../../../components/form/TextField";
 import { FormDivider } from "../../../components/FormDivider";
 import { Link } from "react-router-dom";
+import SEO from "../../../components/SEO";
 
 const Login = () => {
 	const handleGithubLogin = () => {
@@ -18,6 +19,10 @@ const Login = () => {
 			title="Sign in"
 			className="flex-col gap-5 w-full max-w-md mx-auto"
 		>
+			<SEO 
+				title="Login - OpenNest-Africa"
+				description="Sign in to your OpenNest-Africa account to access resources, connect with others, and contribute to community-driven projects."
+			/>
 			<div className="flex flex-col gap-8">
 				<p className="text-2xl font-semibold">Login with your email</p>
 				<form action="">
