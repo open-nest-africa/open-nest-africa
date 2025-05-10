@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../../components/Button";
+import { Link } from "react-router-dom";
 
 const CTA = () => {
   return (
@@ -10,10 +11,12 @@ const CTA = () => {
         inclusive community where knowledge is shared freely and innovation thrives.
       </p>
       <div className="mt-11">
-        <Button
-          className="bg-blue text-white font-semibold text-base px-[153px] py-4"
-          text="Learn More"
-        />
+        <Link to="/about-us">
+          <Button
+            className="bg-blue text-white font-semibold text-base px-[153px] py-4"
+            text="Learn More"
+          />
+        </Link>
       </div>
     </section>
   );
