@@ -6,8 +6,23 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
+import { IconButton } from "@mui/material";
+import { Brightness4, Brightness7 } from "@mui/icons-material";
+import { useColorMode } from "../../ThemeProvider";
+
 
 const Header = () => {
+
+  const { mode, toggleColorMode} = useColorMode();
+
+  const ThemeToggle = () => {
+    return(
+    <IconButton onClick={toggleColorMode}>
+      {mode === 'dark' ? <Brightness7 sx={{color: 'black'}}/> : <Brightness4 sx={{ color: 'black'}}/>}
+    </IconButton>
+    )
+  };
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -19,6 +34,7 @@ const Header = () => {
   useEffect(() => {
     setIsResourcesOpen(false);
   }, []);
+
   return (
     <header className="sticky top-0 z-50 bg-white shadow">
       <nav className="relative px-4 md:px-[112px] py-6">
@@ -95,8 +111,8 @@ const Header = () => {
             </li>
             <li className="cursor-pointer hover:text-blue">What's new</li>
           </ul>
-
-          <Link to="/signup" className="hidden md:block">
+        <ThemeToggle />
+        <Link to="/signup" className="hidden md:block">
             <Button
               text="Sign up"
               className="bg-blue text-white font-semibold text-base py-4 px-10"
